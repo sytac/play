@@ -1,0 +1,2032 @@
+[
+  {
+    "subject": "java",
+    "questions": [
+      {
+        "title": "1)",
+        "code": "1.    int []a = {1,2,3,4,5,6};\n2.    int i = a.length - 1;\n3.    \n4.    while(i>=0){\n5.      System.out.print(a[i]);\n6.      i--;\n7.    } \n",
+        "question": "Given\nWhat is the result",
+        "answers": [
+          {
+            "value": "123456"
+          },
+          {
+            "value": "An exception could be thrown at runtime."
+          },
+          {
+            "value": "654321",
+            "correct": true
+          },
+          {
+            "value": "nothing"
+          },
+          {
+            "value": "65432"
+          },
+          {
+            "value": "12345"
+          }
+        ]
+      },
+      {
+        "title": "2)",
+        "code": "",
+        "question": "Choose the correct statement.\n",
+        "answers": [
+          {
+            "value": "\"A extends B\" is correct if and only if A is a class and B is an interface"
+          },
+          {
+            "value": "\"A extends B\" is correct if and only if A is an interface and B is a class"
+          },
+          {
+            "value": "\"A extends B\" is correct if A and B are either both classes or both interfaces",
+            "correct": true
+          },
+          {
+            "value": "\"A extends B\" is correct for all combinations of A and B being classes or interfaces"
+          }
+        ]
+      },
+      {
+        "title": "3)",
+        "code": "1.  class CP {\n2.     public static void main(String [] args) {\n3.       doTask(1);\n4.       doTask(1,2);\n5.     }\n6.     // insert code here\n7.  }                  \n8.             \n",
+        "question": "Find the given file.\nWhich, inserted independently at line 6, will compile",
+        "answers": [
+          {
+            "value": "static void doTask(int... doArgs) { }",
+            "correct": true
+          },
+          {
+            "value": "static void doTask(int[] doArgs) { }"
+          },
+          {
+            "value": "static void doTask(int doArgs...) { }"
+          },
+          {
+            "value": "static void doTask(int... doArgs, int y) { }"
+          }
+        ]
+      },
+      {
+        "title": "4)",
+        "code": "1.  package io.sytac;\n2.  enum Day {\n3.   MON(\"1\"), TUE(\"2\"), WED(\"3\");\n4.   String s;\n5.   Day(String s) { this.s = s; }\n6.  }\n7.  public class Test {\n8.    static Day d;\n9.    public static void main(String[] args) {\n10.      System.out.println(d.MON.s + \" \" + d.TUE.s);\n11.    }\n12.  }\n13.   \n",
+        "question": "What is the result",
+        "answers": [
+          {
+            "value": "1 2",
+            "correct": true
+          },
+          {
+            "value": "Multiple compilation errors"
+          },
+          {
+            "value": "Compilation fails due to an error on line 5"
+          },
+          {
+            "value": "Compilation fails due to an error on line 10"
+          }
+        ]
+      },
+      {
+        "title": "5)",
+        "code": "1.  package io.sytac;\n2.   class A {\n3.     int a = 5;\n4.     protected int b = 6;\n5.     public int c = 7;\n6.   }\n7.   public class B {\n8.     public static void main(String[] args) {\n9.     A a = new A();\n10.     System.out.print(\" \" + a.a); \n11.     System.out.print(\" \" + a.b); \n12.     System.out.println(\" \" + a.c); \n13.     }\n14.  }\n15.   \n",
+        "question": "What is the result",
+        "answers": [
+          {
+            "value": "5 6 7",
+            "correct": true
+          },
+          {
+            "value": "5 followed by an exception"
+          },
+          {
+            "value": "Compilation fails with an error on line 11"
+          },
+          {
+            "value": "Compilation fails with an error on line 12"
+          }
+        ]
+      },
+      {
+        "title": "6)",
+        "code": "1.  package io.sytac;\n2.  class Road {\n3.     public static void main(String[] args) {\n4.                 for(int __x = 0; __x < 3; __x++) ;\n5.                 int #lb = 7;\n6.                 long [] x [5];\n7.                 Boolean []ba[];\n8.     }         \n9.     enum Traffic { RED, YELLOW, GREEN };\n10.  }\n11.   \n",
+        "question": "What is the result",
+        "answers": [
+          {
+            "value": "Compilation succeeds"
+          },
+          {
+            "value": "Compilation fails with an error on line 5",
+            "correct": true
+          },
+          {
+            "value": "Compilation fails with an error on line 7"
+          },
+          {
+            "value": "Compilation fails with an error on line 8"
+          }
+        ]
+      },
+      {
+        "title": "7)",
+        "code": "1.  package io.sytac;\n2.  public class Test {\n3.       public enum Days { MON, TUE, WED, THU };\n4.   public static void main(String[] args) {\n5.             for(Days d : Days.values() );\n6.             Days [] d2 = Days.values();\n7.             System.out.println(d2[3]);\n8.   }\n9.   }\n10.   \n",
+        "question": "What is the result",
+        "answers": [
+          {
+            "value": "The output is unpredictable"
+          },
+          {
+            "value": "Compilation fails due to an error on line 4"
+          },
+          {
+            "value": "THU",
+            "correct": true
+          },
+          {
+            "value": "WED"
+          }
+        ]
+      },
+      {
+        "title": "9)",
+        "code": "1.  public abstract interface One { \n2.    public void show(String s);\n3.  } \n",
+        "question": " Find the class.\nChoose the correct class.\npublic abstract class Two implements One{\n   public abstract void show(String s) { }\n}\npublic class Two extends One {\n  public void show(Integer i) { }\n}\npublic class Two implements One {\n public void show(Integer i) { }\n}\nclass Two implements One {\n  public void show(String i) { }\n  public void show(Integer s) { }\n}\n",
+        "answers": [
+          {
+            "value": "public abstract class Two implements One{\n  public abstract void show(String s) { }\n}"
+          },
+          {
+            "value": "public class Two extends One {\n  public void show(Integer i) { }\n}"
+          },
+          {
+            "value": "public class Two implements One {\n  public void show(Integer i) { }\n}"
+          },
+          {
+            "value": "class Two implements One {\n  public void show(String i) { }\n  public void show(Integer s) { }\n}",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "11)",
+        "code": "1.  package io.sytac;\n2.  class B {\n3.    public B(String s) {\n4.      System.out.print(\"B\");\n5.    }\n6.  }\n7.  public class A extends B {\n8.    public A(String s) { \n9.      System.out.print(\"A\");\n10.    }\n11.    public static void main(String [] args) {\n12.      new A(\"C\");\n13.    }\n14.  }\n",
+        "question": "Find the file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "BA"
+          },
+          {
+            "value": "BC"
+          },
+          {
+            "value": "BCA"
+          },
+          {
+            "value": "Error in Compilation",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "12)",
+        "code": "1.  package io.sytac;\n2.  class A {\n3.    private final void show(){ \n4.      System.out.print(\"A\"); \n5.    }\n6.  }\n7.  public class B extends A {\n8.    public final void show() { \n9.      System.out.print(\"B\"); \n10.    }\n11.    public static void main(String [] args) {\n12.       new B().show();\n13.      }\n14.  }\n",
+        "question": " Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "A"
+          },
+          {
+            "value": "B",
+            "correct": true
+          },
+          {
+            "value": "AB"
+          },
+          {
+            "value": "Error in Compilation"
+          }
+        ]
+      },
+      {
+        "title": "13)",
+        "question": " Find the correct statement.\n",
+        "answers": [
+          {
+            "value": "Cohesion is the OO principle most closely associated with hiding implementation details"
+          },
+          {
+            "value": "Cohesion is the OO principle most closely associated with making sure that classes know about other classes only through their APIs"
+          },
+          {
+            "value": "Cohesion is the OO principle most closely associated with making sure that a class is designed with a single, well-focused purpose",
+            "correct": true
+          },
+          {
+            "value": "Cohesion is the OO principle most closely associated with allowing a single object to be seen as having many types"
+          }
+        ]
+      },
+      {
+        "title": "14)",
+        "code": "1.  package io.sytac;\n2.  class A { void task1() { } }\n3.  class B extends A { void task2() { } }\n4.  class Test {\n5.    public static void main(String [] args) {\n6.    A a1 = new A();\n7.    A a2 = new B();\n8.    B b1 = new B();\n9.    // insert code here\n10.    ((B)a2).task2();\n11.  }\n12.  } \n",
+        "question": " Find the given file.\nWhich line of code can be inserted at line 9 to compile",
+        "answers": [
+          {
+            "value": "a2.task2();"
+          },
+          {
+            "value": "(B)a2.task2();"
+          },
+          {
+            "value": "((B)a2).task2();",
+            "correct": true
+          },
+          {
+            "value": "Error in Compilation"
+          }
+        ]
+      },
+      {
+        "title": "15)",
+        "code": "1.  package io.sytac;\n2.  class Animal {\n3.    public void eat() { System.out.print(\"Animal eating \"); }\n4.  }\n5.  class Dog extends Animal {\n6.    public void sniff() { System.out.print(\"Dog sniffing \"); }\n7.    public void eat() { System.out.print(\"Dog eating\"); }\n8.  }\n9.  public class Test {\n10.    public static void main(String[] args) { \n11.      new Test().run(); \n12.    }\n13.     void run() {\n14.       new Dog().eat();\n15.       ((Animal) new Dog()).eat();\n16.       ((Animal) new Dog()).sniff();\n17.     }\n18.  } \n",
+        "question": " Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "Animal eating Dog sniffing"
+          },
+          {
+            "value": "Dog eating Dog sniffing"
+          },
+          {
+            "value": "Error in Compilation at line 15"
+          },
+          {
+            "value": "Error in Compilation at line 16",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "16)",
+        "code": "1.  package io.sytac;\n2.  public class Papaya extends Tree {\n3.     public static void main(String[] args) {\n4.       new Papaya().run();\n5.     }\n6.     void run() {\n7.       go(new Tree(), new Papaya());\n8.       go((Papaya) new Tree(), new Papaya());\n9.     }\n10.     void go(Tree t1, Papaya p1) {\n11.       Papaya p2 = (Papaya)t1;\n12.       Tree t2 = (Tree)p1;\n13.     }\n14.  }\n15.  class Tree { } \n",
+        "question": " Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "An exception is thrown at runtime",
+            "correct": true
+          },
+          {
+            "value": "The code compiles and runs with no output"
+          },
+          {
+            "value": "Compilation fails with an error at line 11"
+          },
+          {
+            "value": "Compilation fails with an error at line 12"
+          }
+        ]
+      },
+      {
+        "title": "17)",
+        "code": "1.  package io.sytac;\n2.  public class B extends A {\n3.    public static String print() {\n4.      return \"b\";\n5.    }\n6.    public static void main(String[] args) {\n7.      B b = new B();\n8.      A a = new B();\n9.      System.out.println(b.print() + \" \" + a.print());\n10.   }\n11.  }\n12.  class A {\n13.    public static String print() { \n14.      return \"a\"; \n15.    } \n16.  } \n",
+        "question": " Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "a b"
+          },
+          {
+            "value": "b a",
+            "correct": true
+          },
+          {
+            "value": "Compilation fails"
+          },
+          {
+            "value": "An exception is thrown at runtime"
+          }
+        ]
+      },
+      {
+        "title": "18)",
+        "code": "1.  package io.sytac;\n2.  class C {\n3.     static String s = \"\";\n4.     protected C() { \n5.      s += \"C \";\n6.     }\n7.  }\n8.  class B extends C {\n9.     private B() { s += \"B \"; }\n10.  }\n11.  public class A extends C {\n12.     private A() {\n13.       s += \"A \"; \n14.     }\n15.     public static void main(String[] args) {\n16.       new A();\n17.       System.out.println(s);\n18.       }\n19.  } \n",
+        "question": " Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "A C"
+          },
+          {
+            "value": "C B A"
+          },
+          {
+            "value": "A B C"
+          },
+          {
+            "value": "C A",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "19)",
+        "code": "1.  package io.sytac;\n2.  class Animal {\n3.     Animal() {\n4.       System.out.print(\"a \");\n5.     }\n6.     Animal(String name) {\n7.         this();\n8.       System.out.print(\"ab \" + name);\n9.       }\n10.  }\n11.  public class Cat extends Animal {\n12.    Cat() {\n13.       System.out.print(\"c \"); \n14.     }\n15.    Cat(String name) {\n16.       super(name);\n17.         System.out.print(\"cd \" + name);\n18.     }\n19.     public static void main(String[] args) { \n20.       new Cat(\"x \");\n21.     }\n22.  }\n",
+        "question": " Find the file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "c a ab x cd x"
+          },
+          {
+            "value": "c a ab cd x"
+          },
+          {
+            "value": "a ab x cd x",
+            "correct": true
+          },
+          {
+            "value": "a ab cd x"
+          }
+        ]
+      },
+      {
+        "title": "20)",
+        "code": "1.  package io.sytac;\n2.  class Fish {\n3.     String name = \"fish \";\n4.     String eat() { return \"fish eats\"; }\n5.  }\n6.  class Shark extends Fish {\n7.     String name = \"shark \";\n8.     String eat() { return \"shark eats\"; }\n9.   }\n10.  public class Sea {\n11.     public static void main(String[] args) {\n12.       new Sea().go(); \n13.     }\n14.     void go() {\n15.       Fish f = new Shark();\n16.       System.out.println(f.name + f.eat());\n17.     }\n18.  } \n",
+        "question": " Find the file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "fish fish eats"
+          },
+          {
+            "value": "fish shark eats",
+            "correct": true
+          },
+          {
+            "value": "shark shark eats"
+          },
+          {
+            "value": "shark fish eats"
+          }
+        ]
+      },
+      {
+        "title": "21)",
+        "code": "1.  package io.sytac;\n2.  class A { }\n3.  class B extends A { }\n4.  public class Test {\n5.     static String s = \"-\";\n6.     public static void main(String[] args) {\n7.       A[] aa = new A[2];\n8.       B[] bb = new B[2];\n9.       add(aa);\n10.       add(bb);\n11.       add(5);\n12.       System.out.println(s);\n13.     }\n14.     static void add(A[]... a2) { s += \"4\"; }\n15.     static void add(B[]... b1) { s += \"3\"; }\n16.     static void add(B[] b1) { s += \"2\"; }\n17.     static void add(Object o) { s += \"1\"; }\n18.  }\n",
+        "question": " Find the file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "Compilation fails"
+          },
+          {
+            "value": "-431"
+          },
+          {
+            "value": "-421"
+          },
+          {
+            "value": "-121",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "22)",
+        "code": "1.  package io.sytac;\n2.  class GCTest {\n3.    Integer num = 50;\n4.    GCTest go(GCTest cb) {\n5.      cb = null;\n6.      return cb;\n7.    }\n8.    public static void main(String[] args) {\n9.      GCTest g1 = new GCTest();\n10.      GCTest g2 = new GCTest();\n11.      GCTest g3 = g1.go(g2);\n12.      g1 = null;\n13.      // TO DO\n14.    }\n15.  }\n",
+        "question": "Find the given file.\nWhen the control reaches to \"TO DO\" statement, how many objects will be eligible for garbage collection",
+        "answers": [
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "2",
+            "correct": true
+          },
+          {
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "title": "23)",
+        "code": "1.  package io.sytac;\n2.  class CP {\n3.    String count(short cnt) { return \"only one\"; }\n4.    String count(short... cnt) { return \"too many\"; }\n5.  }\n6.  public class Test {\n7.    public static void main(String [] args) {\n8.      System.out.println(new CP().count(5));\n9.    }\n10.  }\n",
+        "question": "Find the file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "only one"
+          },
+          {
+            "value": "too many"
+          },
+          {
+            "value": "An exception is thrown at runtime"
+          },
+          {
+            "value": "Compilation fails",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "24)",
+        "code": "1.  package io.sytac;\n2.  public class CPArray {\n3.    public static void main(String[] args) {\n4.      int[][] x = {{4,5,}, {6,7}};\n5.      int[] y = (int[]) x[1];\n6.      Object ob = x;\n7.      int[][] x2 = (int[][]) ob;\n8.      int[] x3 = (int[]) ob;\n9.      System.out.println(y[1]);\n10.    }\n11.  } \n",
+        "question": "Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "7"
+          },
+          {
+            "value": "Compilation fails due to an error on line 7"
+          },
+          {
+            "value": "Compilation fails due to an error on line 8",
+            "correct": true
+          },
+          {
+            "value": "An exception is thrown at runtime"
+          }
+        ]
+      },
+      {
+        "title": "25)",
+        "code": "1.  package io.sytac;\n2.  public class CP {\n3.    CP c1;\n4.    CP() { }\n5.    CP(CP c) {\n6.      c1 = c;\n7.    }\n8.    public static void main(String[] args) {\n9.      CP c2 = new CP();\n10.      CP c3 = new CP(c2); \n11.      c3.go();\n12.      CP c4 = c3.c1; \n13.      c4.go();\n14.      CP c5 = c2.c1; \n15.      c5.go();\n16.    }\n17.    void go() { System.out.print(\"A \"); }\n18.  } \n",
+        "question": "Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "A A A"
+          },
+          {
+            "value": "A A"
+          },
+          {
+            "value": "A A followed by Runtime Exception",
+            "correct": true
+          },
+          {
+            "value": "Compilation fails"
+          }
+        ]
+      },
+      {
+        "title": "26)",
+        "code": "1.  package io.sytac;\n2.  class CP {\n3.    int x = 5;\n4.    public static void main(String[] args) {\n5.      final CP c1 = new CP();\n6.      CP c2 = new CP();\n7.      CP c3 = run(c1,c2);\n8.      System.out.println((c1 == c3) + \" \" + (c1.x == c3.x));\n9.    }\n10.    static CP run(CP c1, CP c2) {\n11.      CP cp = c1;\n12.      cp.x = 6;\n13.      return cp;\n14.    }\n15.  }\n",
+        "question": "Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "true true",
+            "correct": true
+          },
+          {
+            "value": "true false"
+          },
+          {
+            "value": "false false"
+          },
+          {
+            "value": "Compilation error"
+          }
+        ]
+      },
+      {
+        "title": "27)",
+        "code": "1.  package io.sytac;\n2.  class A {\n3.    {\n4.      System.out.print(\"a1 \");\n5.    }\n6.    public A() { \n7.      System.out.print(\"a2 \"); \n8.    }\n9.  }\n10.  class B extends A {\n11.    static { \n12.      System.out.print(\"b1 \"); \n13.    }\n14.    public B() {\n15.      System.out.print(\"b2 \"); \n16.    }\n17.    { \n18.      System.out.print(\"b3 \"); \n19.    }\n20.    static {\n21.      System.out.print(\"b4 \");\n22.    }\n23.  }\n24.  public class C extends B {\n25.    public static void main(String[] args) {\n26.      System.out.print(\"c1 \");\n27.      new C();\n28.      System.out.println(\"c2 \");\n29.    }\n30.  } \n",
+        "question": "Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "a1 a2 b1 b2 b3 b4 c1 c2"
+          },
+          {
+            "value": "b1 b4 c1 a1 a2 b3 b2 c2",
+            "correct": true
+          },
+          {
+            "value": "c1 a2 b2 a1 b1 b3 b4 c2"
+          },
+          {
+            "value": "None"
+          }
+        ]
+      },
+      {
+        "title": "28)",
+        "code": "1.  package io.sytac;\n2.  public class CPTest {\n3.     public enum Card {\n4.        SPADES(20), CLUB(50) {\n5.         public int getValue(int val) {\n6.               return val*3; \n7.           }\n8.       };\n9.       Card(int num) {\n10.         this.num = num;\n11.       }\n12.       private int num;\n13.       public int getValue(int val) { \n14.         return num * val; \n15.       }\n16.     }\n17.     public static void main(String[] args) {\n18.       System.out.print(Card.CLUB.getValue(4));\n19.       System.out.print(\" \"+Card.SPADES + \" \" + Card.SPADES.num);\n20.     }\n21.  } \n",
+        "question": "Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "20 SPADES 50"
+          },
+          {
+            "value": "20 50"
+          },
+          {
+            "value": "12 20"
+          },
+          {
+            "value": "12 SPADES 20",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "29)",
+        "code": "1.  package io.sytac;\n2.  public class CpTest {\n3.     static int num = 8;\n4.     public static void main(String[] args) {\n5.       new CpTest().go(num);\n6.       System.out.print(\" \"+num);\n7.     }\n8.     void go(int num) {\n9.       num++;\n10.       for(int num = 3; num < 6; num++);\n11.       System.out.print(\" \"+num);\n12.     }\n13.  }\n",
+        "question": "Find the file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "Compilation fails",
+            "correct": true
+          },
+          {
+            "value": "6 8"
+          },
+          {
+            "value": "8 8"
+          },
+          {
+            "value": "Runtime Exception"
+          }
+        ]
+      },
+      {
+        "title": "30)",
+        "code": "1.  package io.sytac;\n2.  class Class {\n3.   int[] cls = {1,2,3,4,5,6,7,8,9,10};\n4.  }\n5.  public class College {\n6.           public static void main(String[] args) {\n7.                  College [] c = new College[3];\n8.                  c[0] = new College();\n9.                  College co = new College();\n10.                  c[1] = co;\n11.                  co = null;\n12.                  c[1] = null;\n13.                  // TO DO\n14.         }\n15.  } \n",
+        "question": "Find the file.\nHow many objects will be created and after reaching at line 13, how many object will be eligible for GC.\n",
+        "answers": [
+          {
+            "value": "5 Created and 2 for GC",
+            "correct": true
+          },
+          {
+            "value": "3 Created and 1 for GC"
+          },
+          {
+            "value": "3 Created and 2 for GC"
+          },
+          {
+            "value": "None"
+          }
+        ]
+      },
+      {
+        "title": "31)",
+        "code": "1.  package io.sytac;\n2.  class B { }\n3.  class A {\n4.          static B b1;\n5.          B b2;\n6.  }\n7.  public class Test {\n8.   public static void main(String[] args) {\n9.          B b1 = new B();\n10.          B b2 = new B();\n11.          A a1 = new A();\n12.          A a2 = new A();\n13.          a1.b1 = b1;\n14.          a1.b2 = b1;\n15.          a2.b2 = b2;\n16.          a1 = null;\n17.          b1 = null;\n18.          b2 = null;\n19.          // TO DO\n20.   }\n21.  }\n",
+        "question": "Find the file.\nHow many objects are eligible for GC when line 19 is reached",
+        "answers": [
+          {
+            "value": "0"
+          },
+          {
+            "value": "1",
+            "correct": true
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "title": "32)",
+        "code": "1.  package io.sytac;\n2.  class Student {\n3.          int age;\n4.          Student(int age) {\n5.                 this.age = age;\n6.          }\n7.  }\n8.  public class CPTest {\n9.          public static void main(String[] args) {\n10.                 Student s1 = new Student(3);\n11.                 Student[] sa = go(s1, new Student(5));\n12.                 sa[0] = s1;\n13.                 for(Student s : sa){\n14.                        System.out.print(s.age + \" \");\n15.                 }\n16.          }\n17.          static Student[] go(Student s1, Student s2) {\n18.                 s1.age = 2;\n19.                 Student[] sa = {s2, s1};\n20.                 return sa;\n21.          }\n22.  }\n",
+        "question": "Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "3 5"
+          },
+          {
+            "value": "3 3"
+          },
+          {
+            "value": "2 2",
+            "correct": true
+          },
+          {
+            "value": "5 5"
+          }
+        ]
+      },
+      {
+        "title": "33)",
+        "code": "1.  package io.sytac;\n2.  public class CPTest {\n3.          int x = 5;\n4.          public static void main(String[] args) {\n5.                 new CPTest().run();\n6.          }\n7.          void run() {\n8.                 int x;\n9.                 go(++x);\n10.          }\n11.          void go(int y) {\n12.                 int x = ++y;\n13.                 System.out.println(x);\n14.          }\n15.  }\n",
+        "question": "Find the file.\nWhat is the result",
+        "answers": [
+          {
+            "value": 2
+          },
+          {
+            "value": "5"
+          },
+          {
+            "value": "Compilation fails",
+            "correct": true
+          },
+          {
+            "value": "Runtime Exception"
+          }
+        ]
+      },
+      {
+        "title": "35)",
+        "code": "1.  package io.sytac;\n2.  public class ThreadDemo extends Thread {\n3.     public static void main(String [] args) {\n4.       ThreadDemo td = new ThreadDemo();\n5.       Thread t = new Thread(td);\n6.       t.start();\n7.     }\n8.     public void run() {\n9.       for(int i=0;i<4;++i) {\n10.         System.out.print(i + \" \");\n11.       }\n12.     }\n13.  } \n",
+        "question": "Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "Compilation fails"
+          },
+          {
+            "value": "Exception at Runtime"
+          },
+          {
+            "value": "0 1 2 3 4"
+          },
+          {
+            "value": "0 1 2 3",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "36)",
+        "code": "1.  package io.sytac;\n2.  public class ThreadDemo extends Thread {\n3.     public static void main(String [] args) {\n4.       for(int i=0;i<4;++i) {\n5.         System.out.print(i + \" \");\n6.         Thread.currentThread().sleep(1000);\n7.       }\n8.     }\n9.  }\n",
+        "question": "Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "0 1 2 3"
+          },
+          {
+            "value": "1 2 3 4"
+          },
+          {
+            "value": "Compilation fails",
+            "correct": true
+          },
+          {
+            "value": "Runtime Exception"
+          }
+        ]
+      },
+      {
+        "title": "38)",
+        "code": "1.  package io.sytac;\n2.  public class CPTest {\n3.     public static void main(String [] args) {\n4.       System.out.print(\"a \");\n5.       synchronized(args){\n6.         System.out.print(\"b \");\n7.         try {\n8.           args.wait();\n9.         }\n10.         catch(InterruptedException e){}\n11.       }\n12.       System.out.print(\"c \");\n13.     }\n14.  } \n",
+        "question": "Find the given file.\nWhat is the result",
+        "answers": [
+          {
+            "value": "a b",
+            "correct": true
+          },
+          {
+            "value": "a b c"
+          },
+          {
+            "value": "Compilation fails"
+          },
+          {
+            "value": "Runtime Exception"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "javascript",
+    "questions": [
+      {
+        "title": "JavaScript basics",
+        "question": "What is the result of the following?",
+        "code": "(function(){\n  return typeof arguments;\n})()",
+        "answers": [
+          {
+            "value": "object",
+            "correct": true
+          },
+          {
+            "value": "array"
+          },
+          {
+            "value": "arguments"
+          },
+          {
+            "value": "undefined"
+          }
+        ]
+      },
+      {
+        "title": "JavaScript basics",
+        "question": "What is the result of the following?",
+        "code": "var f = function g(){ return 23; };\ntypeof g();",
+        "answers": [
+          {
+            "value": "\"number\""
+          },
+          {
+            "value": "\"undefined\""
+          },
+          {
+            "value": "\"function\""
+          },
+          {
+            "value": "Error",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "JavaScript basics",
+        "question": "What is the result of the following?",
+        "code": "(function(x){\n  delete x;\n  return x;\n})(1);",
+        "answers": [
+          {
+            "value": "1",
+            "correct": true
+          },
+          {
+            "value": "null"
+          },
+          {
+            "value": "undefined"
+          },
+          {
+            "value": "Error"
+          }
+        ]
+      },
+      {
+        "title": "JavaScript basics",
+        "question": "What is the result of the following?",
+        "code": "var y = 1, x = y = typeof x;\nx;",
+        "answers": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "\"number\""
+          },
+          {
+            "value": "undefined"
+          },
+          {
+            "value": "\"undefined\"",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "JavaScript basics",
+        "question": "What is the result of the following?",
+        "code": "(function f(f){\n  return typeof f();\n})(function(){ return 1; });",
+        "answers": [
+          {
+            "value": "\"function\""
+          },
+          {
+            "value": "\"number\"",
+            "correct": true
+          },
+          {
+            "value": "\"undefined\""
+          },
+          {
+            "value": "Error"
+          }
+        ]
+      },
+      {
+        "title": "JavaScript basics",
+        "question": "What is the result of the following?",
+        "code": "(function f(f){\n  return typeof f();\n})(function(){ return 1; });",
+        "answers": [
+          {
+            "value": "\"function\""
+          },
+          {
+            "value": "\"number\"",
+            "correct": true
+          },
+          {
+            "value": "\"undefined\""
+          },
+          {
+            "value": "Error"
+          }
+        ]
+      },
+      {
+        "title": "WWW",
+        "question": "Which of the following is the correct syntax to redirect a url using JavaScript?",
+        "answers": [
+          {
+            "value": "document.location='http://www.newlocation.com';"
+          },
+          {
+            "value": "window.location='http://www.newlocation.com';",
+            "correct": true
+          },
+          {
+            "value": "browser.location='http://www.newlocation.com';"
+          },
+          {
+            "value": "navigator.location='http://www.newlocation.com';"
+          }
+        ]
+      },
+      {
+        "title": "JavaScript basics",
+        "question": "What is the result of the following?",
+        "code": "(function f(){\n  function f(){ return 1; }\n  return f();\n  function f(){ return 2; }\n})()",
+        "answers": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "2",
+            "correct": true
+          },
+          {
+            "value": "undefined"
+          },
+          {
+            "value": "Error"
+          }
+        ]
+      },
+      {
+        "title": "JavaScript basics",
+        "question": "What is the result of the following?",
+        "code": "with (function(x, undefined){}) length",
+        "answers": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "2",
+            "correct": true
+          },
+          {
+            "value": "undefined"
+          },
+          {
+            "value": "Error"
+          }
+        ]
+      },
+      {
+        "title": "Closures",
+        "question": "What's printed in the console?",
+        "code": "var a = 10;\n\nfunction foo() {\n  console.log(a);\n}\n\nfoo();\n",
+        "answers": [
+          {
+            "value": "10",
+            "correct": true
+          },
+          {
+            "value": "null"
+          },
+          {
+            "value": "undefined"
+          }
+        ]
+      },
+      {
+        "title": "Scope",
+        "question": "What's printed in the console?",
+        "code": "function foo() {\n  var a = 20;\n  return this;\n}\nvar b = foo();\n\nconsole.log(b.a)",
+        "answers": [
+          {
+            "value": "20"
+          },
+          {
+            "value": "undefined",
+            "correct": true
+          },
+          {
+            "value": "null"
+          }
+        ]
+      },
+      {
+        "title": "Closure",
+        "question": "What's printed in the console?",
+        "code": "function foo(x) {\n  return function(y) {\n    return y + x;\n  };\n}\nconsole.log(foo(5)(7))",
+        "answers": [
+          {
+            "value": "5"
+          },
+          {
+            "value": "7"
+          },
+          {
+            "value": "12",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Closure",
+        "question": "What's printed in the console?",
+        "code": "function foo(x) {\n  var x = 5;\n  return function(y) {\n    return y + x;\n  };\n}\n\nconsole.log(foo(15)(7))",
+        "answers": [
+          {
+            "value": "12",
+            "correct": true
+          },
+          {
+            "value": "5"
+          },
+          {
+            "value": "7"
+          }
+        ]
+      },
+      {
+        "title": "Scope",
+        "question": "What's printed in the console?",
+        "code": "function foo() {\n  var a = 1;\n  var b = 2;\n  console.log(this.a * this.b);\n}\n\nfoo.call({a: 10, b: 20})",
+        "answers": [
+          {
+            "value": "200",
+            "correct": true
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "title": "Scope",
+        "question": "What's printed in the console?",
+        "code": "function foo() {\n  var a = 1;\n  var b = 2;\n  console.log(this.a * this.b);\n}\n\nfoo()",
+        "answers": [
+          {
+            "value": "NaN",
+            "correct": true
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "title": "Let",
+        "question": "What's printed in the console",
+        "code": "function foo() {\n  let a = 10\n  if(true) {\n    let a = 5;\n  }\n  console.log(a);\n}\n\nfoo()",
+        "answers": [
+          {
+            "value": "5"
+          },
+          {
+            "value": "10",
+            "correct": true
+          },
+          {
+            "value": "null"
+          }
+        ]
+      },
+      {
+        "title": "Expressions",
+        "question": "What's printed in the console",
+        "code": "function foo1()\n{\n  return {\n    bar: \"hello\"\n  };\n}\n\nfunction foo2()\n{\n  return\n  {\n    bar: \"hello\"\n  };\n}\n\nconsole.log(foo1());\nconsole.log(foo2())",
+        "answers": [
+          {
+            "value": "undefined\n{ bar: 'hello' }"
+          },
+          {
+            "value": "{ bar: 'hello' }\nundefined",
+            "correct": true
+          },
+          {
+            "value": "{ bar: 'hello' }\n{ bar: 'hello' }"
+          }
+        ]
+      },
+      {
+        "title": "Expressions",
+        "question": "What's printed in the console",
+        "code": "console.log(1 + 0.2 == 1.2);\nconsole.log(0.1 + 0.2 == 0.3)",
+        "answers": [
+          {
+            "value": "true, true"
+          },
+          {
+            "value": "false, true"
+          },
+          {
+            "value": "true, false",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Delete",
+        "question": "What's printed in the console",
+        "code": "var result = (function(y){\n  delete y;\n  return y;\n})(10);\n\nconsole.log(result)",
+        "answers": [
+          {
+            "value": "null"
+          },
+          {
+            "value": "undefined"
+          },
+          {
+            "value": "10",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Functional Programming",
+        "question": "What's printed in the console",
+        "code": "[1,2,3,4,5,6].filter((i) => i % 2).forEach((x) => console.log(x))",
+        "answers": [
+          {
+            "value": "1, 2, 3, 4, 5, 6"
+          },
+          {
+            "value": "2, 4, 6"
+          },
+          {
+            "value": "1, 3, 5",
+            "correct": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "scala",
+    "questions": [
+      {
+        "title": "Collections",
+        "question": "What is the result?",
+        "code": "println(List(1, 2) :: List(\"a\", \"b\") :: List(true, false))",
+        "answers": [
+          {
+            "value": "List(1, 2, a, b, true, false)"
+          },
+          {
+            "value": "List(List(1, 2), List(a, b), true, false)",
+            "correct": true
+          },
+          {
+            "value": "List(1, 2, List(a, b), List(true, false))"
+          },
+          {
+            "value": "Code doesn't compile"
+          }
+        ]
+      },
+      {
+        "title": "Collections",
+        "question": "What is the result?",
+        "code": "println(List(1, 2) ++ List(\"a\", \"b\") ++ List(true, false))",
+        "answers": [
+          {
+            "value": "List(1, 2, a, b, true, false)",
+            "correct": true
+          },
+          {
+            "value": "List(List(1, 2), List(a, b), true, false)"
+          },
+          {
+            "value": "List(1, 2, List(a, b), List(true, false))"
+          },
+          {
+            "value": "Code doesn't compile"
+          }
+        ]
+      },
+      {
+        "title": "Functions",
+        "question": "What is the result?",
+        "code": "def getPi(): Double = {\n  println(\"Here's Pi\")\n  scala.math.Pi\n}\n\ndef businessLogic(pi: => Double) = {\n  println(\"Operation 1: \" + pi)\n  println(\"Operation 2: \" + pi)\n}\n\nbusinessLogic(getPi())",
+        "answers": [
+          {
+            "value": "Here's Pi\nOperation 1: 3.141592653589793\nOperation 2: 3.141592653589793"
+          },
+          {
+            "value": "Here's Pi\nOperation 1: 3.141592653589793\nHere's Pi\nOperation 2: 3.141592653589793",
+            "correct": true
+          },
+          {
+            "value": "Code doesn't compile because getPi() doesn't return anything"
+          },
+          {
+            "value": "Code doesn't compile for other reasons"
+          }
+        ]
+      },
+      {
+        "title": "Pattern matching",
+        "question": "What is the result?",
+        "code": "def printSize(size: Int) = size match {\n  case _ if size < 5 => println(\"Smaller than five\")\n  case _ if size > 5 => println(\"Bigger than five\")\n}\n\nList(2, 5, 6).foreach(printSize)",
+        "answers": [
+          {
+            "value": "Smaller than five\nBigger than five"
+          },
+          {
+            "value": "Code gives a runtime error",
+            "correct": true
+          },
+          {
+            "value": "Code doesn't compile"
+          }
+        ]
+      },
+      {
+        "title": "Destructuring",
+        "question": "What is the result?",
+        "code": "val Array(a, b) = Array(1, 2, 3)\nprintln(a)\nprintln(b)",
+        "answers": [
+          {
+            "value": "1\n2"
+          },
+          {
+            "value": "Code gives a runtime error",
+            "correct": true
+          },
+          {
+            "value": "Code doesn't compile"
+          }
+        ]
+      },
+      {
+        "title": "Destructuring",
+        "question": "What is the result?",
+        "code": "def add(a: Int, b: Int) = {\n  println(a + b)\n}\n\nadd(List(1,2):_*)",
+        "answers": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "Code gives a runtime error"
+          },
+          {
+            "value": "Code doesn't compile",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Varargs",
+        "question": "What is the result?",
+        "code": "def subtract(a: Int*) = {\n  println(a.reduce(_ - _))\n}\n\nsubtract(List(1,2,3))",
+        "answers": [
+          {
+            "value": "-4"
+          },
+          {
+            "value": "Code gives a runtime error"
+          },
+          {
+            "value": "Code doesn't compile",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Varargs",
+        "question": "What is the result?",
+        "code": "def multiply(a: Int*) = {\n  println(a.reduce(_ * _))\n}\n\nmultiply(List(1,2,3)):_*)",
+        "answers": [
+          {
+            "value": "6",
+            "correct": true
+          },
+          {
+            "value": "Code gives a runtime error"
+          },
+          {
+            "value": "Code doesn't compile"
+          }
+        ]
+      },
+      {
+        "title": "For loops",
+        "question": "What is the result?",
+        "code": "val out = for(a <- 0 to 2 if a % 2 != 0;\n  b <- 0 to 2 if b % 2 == 0) yield (a, b)\n\nprintln(out)",
+        "answers": [
+          {
+            "value": "Vector((0,1), (1,1), (2,1))"
+          },
+          {
+            "value": "Vector(0,1), (2,1)"
+          },
+          {
+            "value": "Vector((1,0), (1,2))",
+            "correct": true
+          },
+          {
+            "value": "Code gives a runtime error"
+          },
+          {
+            "value": "Code doesn't compile"
+          }
+        ]
+      },
+      {
+        "title": "Casting",
+        "question": "What is the result?",
+        "code": "def printSomething(input: Short) = {\n  println(\"Printing something\")\n}\n\nprintSomething(100000000.asInstanceOf[Short])",
+        "answers": [
+          {
+            "value": "Printing something",
+            "correct": true
+          },
+          {
+            "value": "Code gives a runtime error"
+          },
+          {
+            "value": "Code doesn't compile"
+          }
+        ]
+      },
+      {
+        "title": "Currying",
+        "question": "What is the result?",
+        "code": "def add(a: Int, b: Int) = {\n  println(a + b)\n}\n\nval addFive = (add _).curried(5)\n1 until 3 foreach(addFive)",
+        "answers": [
+          {
+            "value": "6\n7\n8",
+            "correct": true
+          },
+          {
+            "value": "6\n7"
+          },
+          {
+            "value": "Code doesn't compile"
+          }
+        ]
+      },
+      {
+        "title": "Streams",
+        "question": "What is the result?",
+        "code": "val stream = 1 #:: 2 #:: 3 #:: Stream.empty\n\nprintln(stream.tail)",
+        "answers": [
+          {
+            "value": "Stream(2, ?)",
+            "correct": true
+          },
+          {
+            "value": "Stream(2, 3)"
+          },
+          {
+            "value": "Code doesn't compile"
+          }
+        ]
+      },
+      {
+        "title": "Bashing the stack",
+        "code": "import scala.annotation.tailrec\n\n@tailrec\ndef doSomethingSilly(nr: Int) = {\n  if (nr > 0) doSomethingSilly(nr - 1) else 0\n}\n\nprintln(doSomethingSilly(100000000))",
+        "question": "What is the result of the above code when the machine has limited memory available?",
+        "answers": [
+          {
+            "value": "A StackOverflowError is thrown"
+          },
+          {
+            "value": "A RuntimeException is thrown"
+          },
+          {
+            "value": "'0' is printed to the console"
+          },
+          {
+            "value": "Code doesn't compile",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Above everything else",
+        "question": "Which class is at the root of the Scala class hierarchy?",
+        "answers": [
+          {
+            "value": "scala.Object"
+          },
+          {
+            "value": "scala.Any",
+            "correct": true
+          },
+          {
+            "value": "scala.ScalaObject"
+          },
+          {
+            "value": "scala.AnyRef"
+          }
+        ]
+      },
+      {
+        "title": "Pattern matching",
+        "question": "What is the result of the following?",
+        "code": "class Person(firstName: String, lastName: String)\n\nnew Person(\"John\", \"Doe\") match {\n  case Person(\"John\", _) => println(\"You're John!\")\n  case Person(\"John\", \"Doe\") => println(\"You're John Doe!\")\n  case _ => println(\"You're not John..\")\n}",
+        "answers": [
+          {
+            "value": "Code doesn't compile",
+            "correct": true
+          },
+          {
+            "value": "\"You're John!\" is printed to the console"
+          },
+          {
+            "value": "\"You're John Doe!\" is printed to the console"
+          },
+          {
+            "value": "\"You're not John...\" is printed to the console"
+          }
+        ]
+      },
+      {
+        "title": "Got tuples?",
+        "question": "What's the max size of a Scala tuple?",
+        "answers": [
+          {
+            "value": "22",
+            "correct": true
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "16"
+          },
+          {
+            "value": "32"
+          }
+        ]
+      },
+      {
+        "title": "Concat frenzy",
+        "question": "What is the result of the following?",
+        "code": "val list = (1,2) :: (\"Hello\", \"There\") :: Nil\nprint(list(1)._2)",
+        "answers": [
+          {
+            "value": "\"There\" is printed to the console",
+            "correct": true
+          },
+          {
+            "value": "\"Hello\" is printed to the console"
+          },
+          {
+            "value": "Line 1 doesn't compile"
+          },
+          {
+            "value": "Line 2 doesn't compile"
+          }
+        ]
+      },
+      {
+        "title": "Moar factorial fun",
+        "question": "What is the result of the following?",
+        "code": "import scala.annotation.tailrec\n\n@tailrec\ndef factorial(nr: Int): Int = {\n  if (nr > 1) nr * factorial(nr - 1)\n  else 1\n}\nprintln(factorial(6))",
+        "answers": [
+          {
+            "value": "Code doesn't compile",
+            "correct": true
+          },
+          {
+            "value": "\"1\" is printed to the console"
+          },
+          {
+            "value": "\"120\" is printed to the console"
+          },
+          {
+            "value": "\"720\" is printed to the console"
+          }
+        ]
+      },
+      {
+        "title": "Inside out",
+        "question": "What is the result of the following?",
+        "code": "val name = \"john\"\nprintln(name.reverse == name.foldRight(\"\")(_ + _))",
+        "answers": [
+          {
+            "value": "\"false\" is always printed to the console",
+            "correct": true
+          },
+          {
+            "value": "\"true\" is always printed to the console"
+          },
+          {
+            "value": "Depends on the JVM implementation"
+          },
+          {
+            "value": "Code doesn't compile"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "android",
+    "questions": [
+      {
+        "title": "Libraries",
+        "question": "Which of the following is NOT a dependency injection library?",
+        "answers": [
+          {
+            "value": "Dager"
+          },
+          {
+            "value": "ButterKnife"
+          },
+          {
+            "value": "RoboGuice"
+          },
+          {
+            "value": "Retrofit",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Intents",
+        "question": "Which component is not activated by an Intent?",
+        "answers": [
+          {
+            "value": "Activity"
+          },
+          {
+            "value": "Service"
+          },
+          {
+            "value": "ContentProvider",
+            "correct": true
+          },
+          {
+            "value": "BroadcastListener"
+          }
+        ]
+      },
+      {
+        "title": "Features",
+        "question": "Which of the code snippets below is the correct way to check if a Compass sensor is present on the system?",
+        "answers": [
+          {
+            "value": "getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_COMPASS)",
+            "correct": true
+          },
+          {
+            "value": "getSensorManager().hasSystemFeature(SensorManager.FEATURE_SENSOR_COMPASS)"
+          },
+          {
+            "value": "getContext().hasSystemFeature(Features.FEATURE_SENSOR_COMPASS)"
+          }
+        ]
+      },
+      {
+        "title": "Lifecycle",
+        "question": "Scenario in which only onDestroy is called for an activity without onPause() and onStop()",
+        "answers": [
+          {
+            "value": "When you press home button of device"
+          },
+          {
+            "value": "When you call finish() from within onCreate()",
+            "correct": true
+          },
+          {
+            "value": "When the device is running low on memory"
+          },
+          {
+            "value": "It can never happen."
+          }
+        ]
+      },
+      {
+        "title": "Manifest attributes",
+        "question": "What is importance of version code and version name in attributes in android?",
+        "answers": [
+          {
+            "value": "It tells the activity's version and name"
+          },
+          {
+            "value": "It tells the applications version and name. It will be used when you update your app in google playstore",
+            "correct": true
+          },
+          {
+            "value": "It is the applications identity"
+          },
+          {
+            "value": "It is used internally by the os."
+          }
+        ]
+      },
+      {
+        "title": "Lifecycle",
+        "question": "What is an example of configuration change in android?",
+        "answers": [
+          {
+            "value": "flipping the phone",
+            "correct": true
+          },
+          {
+            "value": "keyboard on"
+          },
+          {
+            "value": "menu opened"
+          }
+        ]
+      },
+      {
+        "title": "Intents",
+        "question": "A pending intent is...",
+        "answers": [
+          {
+            "value": "An intent that wraps another Intent object, and is executed at some point of time in future",
+            "correct": true
+          },
+          {
+            "value": "Always an expicit intent"
+          },
+          {
+            "value": "Always an implicit intent"
+          },
+          {
+            "value": "An intent without an action."
+          }
+        ]
+      },
+      {
+        "title": "Parcelable vs Serializable",
+        "question": "Why use parcelable instead of Serializable in Android",
+        "answers": [
+          {
+            "value": "Parcelable has much simpler implementation"
+          },
+          {
+            "value": "Parcelable is much faster than Serializable",
+            "correct": true
+          },
+          {
+            "value": "is no benefit, you can use either"
+          },
+          {
+            "value": "Parcelable has lower memory footprint"
+          }
+        ]
+      },
+      {
+        "title": "Layouts",
+        "question": "Which layout is ideal for displaying its children views in a single column or row?",
+        "answers": [
+          {
+            "value": "LinearLayout",
+            "correct": true
+          },
+          {
+            "value": "RelativeLayout"
+          },
+          {
+            "value": "AbsoluteLayout"
+          },
+          {
+            "value": "FrameLayout"
+          }
+        ]
+      },
+      {
+        "title": "Bluetooth Low Energy",
+        "question": "In which version did Android add support for BLE (Bluetooth Low Energy)?",
+        "answers": [
+          {
+            "value": "5.1 (Lollipop)"
+          },
+          {
+            "value": "4.3 (Jellybean)",
+            "correct": true
+          },
+          {
+            "value": "4.4 (KitKat)"
+          },
+          {
+            "value": "3.0 (Honeycomb)"
+          }
+        ]
+      },
+      {
+        "title": "Activity lifecycle",
+        "question": "When the activity is not in focus, but still visible on the screen it is in?",
+        "answers": [
+          {
+            "value": "running state"
+          },
+          {
+            "value": "stopped state"
+          },
+          {
+            "value": "destroyed state"
+          },
+          {
+            "value": "paused state",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Storage across applications",
+        "question": "If you want share the data across multiple applications which of the following should you choose?",
+        "answers": [
+          {
+            "value": "Internal storage"
+          },
+          {
+            "value": "SQL Database"
+          },
+          {
+            "value": "Content provider",
+            "correct": true
+          },
+          {
+            "value": "Shared Preferences"
+          }
+        ]
+      },
+      {
+        "title": "Doze mode",
+        "question": "In which version did Android add the Doze mode for extending battery life?",
+        "answers": [
+          {
+            "value": "5.1 (Lollipop)"
+          },
+          {
+            "value": "4.0 (Ice cream sandwich)"
+          },
+          {
+            "value": "4.4 (KitKat)"
+          },
+          {
+            "value": "6.0 (Marshmallow)",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Base class for activities and services",
+        "question": "Which is the immediate base class for activity and services?",
+        "answers": [
+          {
+            "value": "Context",
+            "correct": true
+          },
+          {
+            "value": "Application"
+          },
+          {
+            "value": "Component"
+          },
+          {
+            "value": "ApplicationContext"
+          }
+        ]
+      },
+      {
+        "title": "Broadcast Receivers",
+        "question": "On which thread broadcast receivers will work in android?",
+        "answers": [
+          {
+            "value": "Worker thread"
+          },
+          {
+            "value": "Main thread",
+            "correct": true
+          },
+          {
+            "value": "Activity thread"
+          },
+          {
+            "value": "None of the above"
+          }
+        ]
+      },
+      {
+        "title": "Lists and Grids",
+        "question": "Which component did Google introduce as a replacement for GridViews and ListViews?",
+        "answers": [
+          {
+            "value": "TableView"
+          },
+          {
+            "value": "RecyclerView",
+            "correct": true
+          },
+          {
+            "value": "ReusableView"
+          },
+          {
+            "value": "LayoutView"
+          }
+        ]
+      },
+      {
+        "title": "Tablet layouts",
+        "question": "What's the recommended way of creating tablet layouts?",
+        "answers": [
+          {
+            "value": "Adding multiple fragments to an Activity",
+            "correct": true
+          },
+          {
+            "value": "Adding multiple ViewGroups to an activity"
+          },
+          {
+            "value": "Don't use activities, only use fragments"
+          },
+          {
+            "value": "None of the above"
+          }
+        ]
+      },
+      {
+        "title": "Toast",
+        "question": "When was the Toast class added in the Android SDK?",
+        "answers": [
+          {
+            "value": "API 5"
+          },
+          {
+            "value": "API 13"
+          },
+          {
+            "value": "API 10"
+          },
+          {
+            "value": "API 1",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Broadcast receiver design pattern",
+        "question": "Broadcast receivers are Android’s implementation of which design pattern?",
+        "answers": [
+          {
+            "value": "Observer",
+            "correct": true
+          },
+          {
+            "value": "Facade"
+          },
+          {
+            "value": "Command"
+          },
+          {
+            "value": "Mediator"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "clojure",
+    "questions": [
+      {
+        "title": "Immutability",
+        "question": "Which objects are immutable?\nA.(String. \"mutable\")\nB. {:key \"value\"}\nC. (java.util.HashMap.)\nD. (atom {})",
+        "answers": [
+          {
+            "value": "A, B, D"
+          },
+          {
+            "value": "A, B",
+            "correct": true
+          },
+          {
+            "value": "B, C"
+          },
+          {
+            "value": "B, D"
+          }
+        ]
+      },
+      {
+        "title": "Testing libraries",
+        "question": "Which of the following is NOT a valid clojure testing library?",
+        "answers": [
+          {
+            "value": "Riemann",
+            "correct": true
+          },
+          {
+            "value": "clojure.test"
+          },
+          {
+            "value": "midje"
+          },
+          {
+            "value": "expectations"
+          }
+        ]
+      },
+      {
+        "title": "Transducers",
+        "question": "Which of the following is NOT a valid transducer?",
+        "answers": [
+          {
+            "value": "(map inc)"
+          },
+          {
+            "value": "(comp (filter odd?) (take 5))"
+          },
+          {
+            "value": "(fn [xf] (fn ([] 0) ([x] x) ([x i] (xf x i))))"
+          },
+          {
+            "value": "(transduce (range 100))",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Clojure facts",
+        "question": "Which all true statements about Clojure\nA.  Is a functional programming language\nB. Has a strong type system\nC. Can only run within a host language runtime\nD. Is in the same programming languages family as Haskell",
+        "answers": [
+          {
+            "value": "A, D"
+          },
+          {
+            "value": "B, C"
+          },
+          {
+            "value": "A, B"
+          },
+          {
+            "value": "A, C",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "title": "Functional programming languages seniority seating",
+        "question": "Which programming languages that are older than Clojure, counting from the first public release",
+        "answers": [
+          {
+            "value": "golang and Scala"
+          },
+          {
+            "value": "Scala and F#",
+            "correct": true
+          },
+          {
+            "value": "Julia"
+          }
+        ]
+      },
+      {
+        "title": "Persistent data",
+        "question": "Which all true statements about persistent data structures in Clojure?\nA. ...all implemented as trees\nB. ..stored into the database\nC. ...optimized for memory efficiency\nD ...functions",
+        "answers": [
+          {
+            "value": "A, C, D",
+            "correct": true
+          },
+          {
+            "value": "B, C"
+          },
+          {
+            "value": "C, D"
+          },
+          {
+            "value": "A, C"
+          }
+        ]
+      },
+      {
+        "title": "Protocols",
+        "question": "What are the differences between Clojure Protocols and interfaces in OO languages?\nA. ...existing final classes can participate into any protocol\nB. ...they can contain mutable state\nC. ...they don't establish an is-a relationship\nD. ...their functions can dispatch on multiple arguments",
+        "answers": [
+          {
+            "value": "B, D"
+          },
+          {
+            "value": "A, C",
+            "correct": true
+          },
+          {
+            "value": "A, B"
+          },
+          {
+            "value": "B, C"
+          }
+        ]
+      },
+      {
+        "title": "Idiomatic sequences",
+        "question": "Which one is the most idiomatic way in Clojure to test if a sequence s is empty?",
+        "answers": [
+          {
+            "value": "(seq s)",
+            "correct": true
+          },
+          {
+            "value": "(empty? s)"
+          },
+          {
+            "value": "(= 0 (count s))"
+          }
+        ]
+      },
+      {
+        "title": "Asynchronous operations on channels",
+        "question": "Which of the following is the function to asynchronously take one value out of a core.async channel?",
+        "answers": [
+          {
+            "value": "<!",
+            "correct": true
+          },
+          {
+            "value": "get!"
+          },
+          {
+            "value": "first"
+          }
+        ]
+      },
+      {
+        "title": "Compojure routes",
+        "question": "Which of the following is NOT a valid compojure route definition?",
+        "answers": [
+          {
+            "value": "(GET \"/sytac/quiz\" :question [] (render question)",
+            "correct": true
+          },
+          {
+            "value": "(POST \"/sytac/quiz/:answer\" [answer] (validate answer))"
+          },
+          {
+            "value": "(DELETE \"/sytac/quiz/1\" [] {:status 200})"
+          }
+        ]
+      },
+      {
+        "title": "Docstring jeopardy",
+        "question": "Wraps x in a way such that a reduce will terminate with the value x",
+        "answers": [
+          {
+            "value": "clojure.core/reduced",
+            "correct": true
+          },
+          {
+            "value": "clojure.core/exit"
+          },
+          {
+            "value": "clojure.core/wrap"
+          }
+        ]
+      },
+      {
+        "title": "Docstring jeopardy",
+        "question": "Executes the no-arg fns in parallel, returning a lazy sequence of their values",
+        "answers": [
+          {
+            "value": "clojure.core/pcalls",
+            "correct": true
+          },
+          {
+            "value": "clojure.core/pmap"
+          },
+          {
+            "value": "clojure.core/map-parallel"
+          }
+        ]
+      },
+      {
+        "title": "Docstring jeopardy",
+        "question": "Returns the immediate superclass and direct interfaces of c, if any",
+        "answers": [
+          {
+            "value": "clojure.core/bases",
+            "correct": true
+          },
+          {
+            "value": "clojure.core/supers"
+          },
+          {
+            "value": "clojure.core/isa?"
+          }
+        ]
+      },
+      {
+        "title": "LISP legacy",
+        "question": "Clojure is a LISP-1, which means that...",
+        "answers": [
+          {
+            "value": "...it uses a single namespace for functions and variables",
+            "correct": true
+          },
+          {
+            "value": "...it implements the first version of the LISP standard"
+          },
+          {
+            "value": "...it always runs as a single thread to eliminate concurrency issues"
+          }
+        ]
+      }
+    ]
+  }
+]

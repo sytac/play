@@ -1,0 +1,37 @@
+{
+  "name": "QuizEntryAnswer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+  },
+  "validations": [],
+  "relations": {
+    "quizEntry": {
+      "type": "belongsTo",
+      "model": "QuizEntry",
+      "foreignKey": "quizEntryId"
+    },
+    "option": {
+      "type": "belongsTo",
+      "model": "Option",
+      "foreignKey": "optionId"
+    },
+    "question": {
+      "type": "belongsTo",
+      "model": "Question",
+      "foreignKey": "questionId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

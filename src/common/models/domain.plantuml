@@ -1,0 +1,40 @@
+@startuml
+class Option {
+  id: String
+  value: String
+  correct: Boolean
+}
+
+Question "1" -- "0..*" Option
+class Question {
+  id: String
+  value: String
+}
+
+Quiz "1" -- "0..*" Question
+class Quiz {
+  id: String
+  subject: String
+}
+
+QuizEntry "0..*" -- "1" Quiz
+QuizEntry "1" -- "0..*" QuizEntryAnswer
+class QuizEntry {
+  id: String
+  firstName: String
+  lastName: String
+  twitter: String
+  email: String
+  interests: [String]
+  startTime: Date
+  endTime: Date
+}
+
+QuizEntryAnswer "0..*" -- "1" Question
+QuizEntryAnswer "0..*" -- "1" Option
+class QuizEntryAnswer {
+  id: String
+  questionId: String
+  optionId: String
+}
+@enduml

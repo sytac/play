@@ -1,0 +1,43 @@
+{
+  "name": "Option",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "correct": {
+      "type": "boolean",
+      "required": true
+    },
+
+    "hidden": [ "correct" ],
+    "protected": [ "correct" ]
+  },
+  "validations": [],
+  "relations": {
+    "question": {
+      "type": "belongsTo",
+      "model": "Question",
+      "foreignKey": "questionId"
+    },
+    "answers": {
+      "type": "hasMany",
+      "model": "QuizEntryAnswer",
+      "foreignKey": "optionId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+.idea
+.tmp
+build
+
+# Google Cloud configuration files
+SytacPlayServiceAccount.json
