@@ -29,7 +29,7 @@ npm run production
 You can get the results as a CSV file like this (on the server running the app):
 ```
 cd build
-./bin/quizEntries
+./bin/getQuizEntries
 ```
 
 There is now a quiz-entries.csv file in the current directory.
