@@ -25,19 +25,13 @@ boot(app, path.resolve(__dirname, '..', 'server'), (error) => {
       try {
         const csv = json2csv({
           data: results.
-            sort((a, b) => {
-              if (a.score === b.score) {
-                return b.timeLeft - a.timeLeft
-              } else {
-                return b.score - a.score
-              }
-            }).
+            sort((a, b) =>  b.score - a.score).
             map(entry => {
               const copy = JSON.parse(JSON.stringify(entry))
               copy.interests = Object.keys(entry.into).filter(subj => entry.into[subj]).join(', ')
               return copy
             }),
-          fields: [ 'firstName', 'lastName', 'email', 'github', 'interests', 'subject', 'score', 'startTime', 'endTime' ],
+          fields: [ 'firstName', 'lastName', 'email', 'github', 'interests', 'subject', 'score', 'startTime', 'endTime'],
         })
 
 
