@@ -24,7 +24,11 @@ boot(app, path.resolve(__dirname, '..', 'server'), (error) => {
     .then(results => {
       try {
         const csv = json2csv({
-          data: results,
+          data: results.map(entry => {
+              const copy = JSON.parse(JSON.stringify(entry))
+              copy.interests = Object.keys(entry.into).filter(subj => entry.into[subj]).join(', ')
+              return copy
+            }),
           fields: [ 'firstName', 'lastName', 'email', 'github', 'interests', 'subject', 'score', 'startTime', 'endTime' ],
         })
 
